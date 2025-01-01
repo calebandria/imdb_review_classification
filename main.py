@@ -1,4 +1,4 @@
-from text_classifation_tools import BagOfWords
+from text_classification_tools import BagOfWords
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from nltk.tokenize.toktok import ToktokTokenizer
