@@ -1,6 +1,7 @@
 from text_classification_tools import BagOfWords
 import pandas as pd
 from sklearn.model_selection import train_test_split
+import nltk
 from nltk.tokenize.toktok import ToktokTokenizer
 from nltk.corpus import stopwords
 
