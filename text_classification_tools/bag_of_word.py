@@ -13,9 +13,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 
 # Download required nltk resource
-nltk.download('stopwords')
+#nltk.download('stopwords')
 #nltk.download('punkt')
-nltk.download('wordnet')
+#nltk.download('wordnet')
 
 class BagOfWords:
   def __init__(self,tokenizer,stopword_list,reviewCol="review",sentimentCol="sentiment"):

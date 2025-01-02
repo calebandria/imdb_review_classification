@@ -3,8 +3,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 class Ngram(BagOfWords):
     def __init__(self,tokenizer,stopword_list,ngram, reviewCol="review",sentimentCol="sentiment"):
-    super().__init__(tokenizer,stopword_list)
-    self ngram = ngram
+        super().__init__(tokenizer,stopword_list)
+        self ngram = ngram
 
     def feature_extraction(self,data):
         cv = CountVectorizer(ngram_range=(self.ngram, self.ngram), binary=True)
