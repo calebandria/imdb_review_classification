@@ -1,9 +1,10 @@
-from text_classification_tools import BagOfWords
+from text_classification_tools import BagOfWords, TfIdf
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import nltk
 from nltk.tokenize.toktok import ToktokTokenizer
 from nltk.corpus import stopwords
+from gensim.models import Word2Vec
 
 
 def main():
@@ -24,10 +25,16 @@ def main():
     tokenizer = ToktokTokenizer()
 
     #for bag of words and then logistic regression
-    bow = BagOfWords(tokenizer,stopword_list)
-    vectorizer, classifier = bow.modelLogisticRegressionTraining(train_data)
-    bow.modelLogisticRegressionTesting(test_data, vectorizer, classifier)
+    #bow = BagOfWords(tokenizer,stopword_list)
+    #vectorizer, classifier = bow.modelLogisticRegressionTraining(train_data)
+    #bow.modelLogisticRegressionTesting(test_data, vectorizer, classifier)
 
+    #for tfidf and then logistic regression
+    tfidf = TfIdf(tokenizer, stopword_list)
+    vectorizer, classifier = tfidf.modelLogisticRegressionTraining(train_data)
+    tfidf.modelLogisticRegressionTesting(test_data, vectorizer, classifier)
+
+    
 
 if __name__ == "__main__":
     main()
