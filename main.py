@@ -43,9 +43,9 @@ def main():
  """
 
     #for ngram=2 
-    ngram_2 = Ngram(tokenizer, stopword_list, 2)
+    """ ngram_2 = Ngram(tokenizer, stopword_list, 2)
     vectorizer, classifier = ngram_2.modelLogisticRegressionTraining(train_data)
-    ngram_2.modelLogisticRegressionTesting(test_data, vectorizer, classifier)
+    ngram_2.modelLogisticRegressionTesting(test_data, vectorizer, classifier) """
 
     #for ngram=3
     ngram_3 = Ngram(tokenizer, stopword_list, 3)
