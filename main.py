@@ -24,10 +24,10 @@ def utilities_data(dataPath, labelCol="sentiment"):
     stopword_list=nltk.corpus.stopwords.words('english')
     tokenizer = ToktokTokenizer()
 
-    return train_data, test_dta, tokenizer, stopword_list
+    return train_data, test_data, tokenizer, stopword_list
 
 def main():
-    train_data, test_dta, tokenizer, stopword_list = utilities_data('./data/IMDB Dataset.csv')
+    train_data, test_data, tokenizer, stopword_list = utilities_data('./data/IMDB Dataset.csv')
 
     #for bag of words and then logistic regression
 
