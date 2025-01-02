@@ -48,10 +48,10 @@ def main():
     ngram_2.modelLogisticRegressionTesting(test_data, vectorizer, classifier) """
 
     #for ngram=3
-    ngram_3 = Ngram(tokenizer, stopword_list, 3)
+    """ ngram_3 = Ngram(tokenizer, stopword_list, 3)
     vectorizer, classifier = ngram_3.modelLogisticRegressionTraining(train_data)
     ngram_3.modelLogisticRegressionTesting(test_data, vectorizer, classifier)
-
+ """
     #for ngram = 5
     ngram_5 = Ngram(tokenizer, stopword_list, 5)
     vectorizer, classifier = ngram_5.modelLogisticRegressionTraining(train_data)
