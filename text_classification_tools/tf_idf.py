@@ -1,5 +1,5 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
-from text_classification_tools.bag_of_words import BagOfWords
+from .bag_of_word import BagOfWords
 
 class TfIdf(BagOfWords):
   def __init__(self,tokenizer,stopword_list,reviewCol="review",sentimentCol="sentiment"):
