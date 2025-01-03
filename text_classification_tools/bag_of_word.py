@@ -77,8 +77,9 @@ class BagOfWords:
     data[self.reviewCol] = data[self.reviewCol].apply(self.remove_stopwords)
 
     data[self.sentimentCol] = data[self.sentimentCol].map({'positive': 1, 'negative': 0})
-
+    
     print("Number of NaN values in y: ", {np.isnan(data[self.sentimentCol]).sum()})
+    print("Data head in y_train", data[self.sentimentCol].head())
     return data[self.reviewCol], data[self.sentimentCol]
 
 
@@ -88,9 +89,9 @@ class BagOfWords:
     data_X, data_y = self.final_version_data(data)
     #train_review, test_review, train_label, test_label = train_test_split(data_X, data_y, test_size=0.2, random_state=42)
     cv_train_data = cv.fit_transform(data_X)
-    data_y = data_y.astype('int')
+    #data_y = data_y.astype('int')
 
-    print("Number of NaN values in y after type conversion: ", {np.isnan(data_y).sum()})
+    #print("Number of NaN values in y after type conversion: ", {np.isnan(data_y).sum()})
     #cv_test_data = cv.transform(test_review)
 
     print("Train shape: ", cv_train_data.shape)
@@ -105,6 +106,7 @@ class BagOfWords:
 
     #training
     vectorizer, X_train, y_train = self.feature_extraction(training_data)
+    y_train.head()
     clf.fit(X_train,y_train)
 
     y_train_pred = clf.predict(X_train)

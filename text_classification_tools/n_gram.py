@@ -12,9 +12,9 @@ class Ngram(BagOfWords):
         data_X, data_y = self.final_version_data(data)
         cv_train_data = cv.fit_transform(data_X)
         #cv_test_data = cv.transform(test_review)
-        data_y = data_y.astype('int')
+        #data_y = data_y.astype('int')
 
-        print("Number of NaN values in y after type conversion: ", {np.isnan(data_y).sum()})
+        #print("Number of NaN values in y after type conversion: ", {np.isnan(data_y).sum()})
         print("Train shape: ", cv_train_data.shape)
         #print("Test shape: ", cv_test_data.shape)
         #print("Number of NaN values in y: ", {np.isnan(data_y).sum()})
