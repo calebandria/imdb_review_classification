@@ -52,6 +52,8 @@ def main():
     vectorizer, classifier = ngram_3.modelLogisticRegressionTraining(train_data)
     ngram_3.modelLogisticRegressionTesting(test_data, vectorizer, classifier)
 
+
+    print("test data before second try: \n", test_data.head())
     #for ngram = 5
     ngram_5 = Ngram(tokenizer, stopword_list, 5)
     vectorizer, classifier = ngram_5.modelLogisticRegressionTraining(train_data)
