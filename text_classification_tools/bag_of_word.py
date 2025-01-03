@@ -90,7 +90,7 @@ class BagOfWords:
     #cv_test_data = cv.transform(test_review)
 
     print("Train shape: ", cv_train_data.shape)
-    print(f"Number of NaN values in y: {np.isnan(data_y).sum()}")
+    print("Number of NaN values in y: ", {np.isnan(data_y).sum()})
     #print("Test shape: ", cv_test_data.shape)
 
 
