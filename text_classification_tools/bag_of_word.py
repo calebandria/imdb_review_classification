@@ -99,7 +99,7 @@ class BagOfWords:
     clf = LogisticRegression()
 
     #training
-    cv, X_train, y_train = self.feature_extraction(training_data)
+    vectorizer, X_train, y_train = self.feature_extraction(training_data)
     clf.fit(X_train,y_train)
 
     y_train_pred = clf.predict(X_train)
@@ -111,7 +111,7 @@ class BagOfWords:
 
     print(f"Training: \nAccuracy: {training_accuracy} \nConfusion matrix: \n{cm_matrix_train} \n All other classification metrics: \n{class_report_train}")
 
-    return cv, clf
+    return vectorizer, clf
 
   def modelLogisticRegressionTesting(self, test_data, vectorizer, classifier):
 
