@@ -78,6 +78,7 @@ class BagOfWords:
 
     data[self.sentimentCol] = data[self.sentimentCol].map({'positive': 1, 'negative': 0})
 
+    print("Number of NaN values in y: ", {np.isnan(data[self.sentimentCol]).sum()})
     return data[self.reviewCol], data[self.sentimentCol]
 
 
@@ -90,7 +91,7 @@ class BagOfWords:
     #cv_test_data = cv.transform(test_review)
 
     print("Train shape: ", cv_train_data.shape)
-    print("Number of NaN values in y: ", {np.isnan(data_y).sum()})
+    
     #print("Test shape: ", cv_test_data.shape)
 
 
