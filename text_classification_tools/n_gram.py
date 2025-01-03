@@ -1,4 +1,5 @@
 from .bag_of_word import BagOfWords
+import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 
 class Ngram(BagOfWords):
@@ -14,5 +15,5 @@ class Ngram(BagOfWords):
 
         print("Train shape: ", cv_train_data.shape)
         #print("Test shape: ", cv_test_data.shape)
-        
+        print("Number of NaN values in y: ", {np.isnan(data_y).sum()})
         return cv, cv_train_data, data_y
