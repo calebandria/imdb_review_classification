@@ -90,6 +90,7 @@ class BagOfWords:
     #cv_test_data = cv.transform(test_review)
 
     print("Train shape: ", cv_train_data.shape)
+    print(f"Number of NaN values in y: {np.isnan(data_y).sum()}")
     #print("Test shape: ", cv_test_data.shape)
 
 
@@ -121,7 +122,7 @@ class BagOfWords:
     #vectorizer, classifier = self.modelLogisticRegressionTraining()
     X_test = vectorizer.transform(data_test_X)
 
-    print("Train shape: ", X_test.shape)
+    print("Test shape: ", X_test.shape)
 
     #testing
     y_pred = classifier.predict(X_test)
